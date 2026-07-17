@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valora tu casa en la Margen Derecha — DELAGALA Consultoría Inmobiliaria</title>
+<meta name="description" content="Valoración gratuita en la Margen Derecha de Bizkaia. Getxo, Sopelana, Berango, Leioa, Erandio. DELAGALA desde 2014.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#1A1A1A;
+  --black2:#2C2C2C;
+  --gray-dk:#555550;
+  --gray:#8A8880;
+  --gray-md:#C0BDB8;
+  --gray-lt:#E8E5E0;
+  --gray-pl:#F2F0EC;
+  --white:#FFFFFF;
+  --off:#FAFAF8;
+  --green:#1A8A52;
+  --wa:#25D366;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--off);color:var(--black);-webkit-font-smoothing:antialiased;font-weight:300}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:all .3s;border-bottom:1px solid transparent}
+nav.on{background:rgba(26,26,26,0.96);backdrop-filter:blur(12px);border-color:rgba(255,255,255,.08)}
+.nlogo{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--white);letter-spacing:.12em;opacity:0;transition:opacity .3s}
+nav.on .nlogo{opacity:1}
+.nright{display:flex;align-items:center;gap:12px}
+.ntel{font-size:12px;color:rgba(255,255,255,0);transition:color .3s;font-weight:300}
+nav.on .ntel{color:rgba(255,255,255,.5)}
+nav.on .ntel strong{color:var(--white);font-weight:500}
+.nwa{display:inline-flex;align-items:center;gap:7px;background:var(--wa);color:#fff;font-size:12px;font-weight:400;padding:7px 16px;border-radius:2px;text-decoration:none;letter-spacing:.04em;transition:opacity .2s}
+.nwa:hover{opacity:.88}
+.nwa svg{width:14px;height:14px;fill:#fff}
+
+.hero{min-height:100vh;position:relative;display:grid;grid-template-columns:1fr 420px;overflow:hidden}
+.hbg{position:absolute;inset:0}
+.hbg img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(26,26,26,.92) 0%,rgba(26,26,26,.72) 52%,rgba(26,26,26,.3) 100%)}
+.hline{position:absolute;left:calc(100% - 460px);top:0;bottom:0;width:1px;background:rgba(255,255,255,.1);z-index:1}
+.hline::before{content:'';position:absolute;top:20%;height:35%;width:1px;background:rgba(255,255,255,.4)}
+
+.hcontent{position:relative;z-index:2;padding:120px 40px 64px;align-self:end}
+.htag{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.htag-line{width:24px;height:1px;background:rgba(255,255,255,.4)}
+.htag-text{font-size:10px;font-weight:400;color:rgba(255,255,255,.5);letter-spacing:.18em;text-transform:uppercase}
+h1{font-family:var(--serif);font-size:clamp(54px,6.5vw,88px);color:#fff;line-height:1.0;font-weight:300;margin-bottom:6px}
+h1 strong{font-weight:700;display:block}
+h1 em{font-style:italic;font-weight:300;color:rgba(255,255,255,.65)}
+.hsub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.75;max-width:440px;margin:22px 0 36px;font-weight:300}
+.hdata{display:flex;border-top:1px solid rgba(255,255,255,.1);padding-top:24px}
+.hd{padding:0 24px;border-right:1px solid rgba(255,255,255,.08)}
+.hd:first-child{padding-left:0}
+.hd:last-child{border-right:none}
+.hd-val{font-family:var(--serif);font-size:24px;color:#fff;font-weight:600;line-height:1}
+.hd-lab{font-size:10px;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.09em;margin-top:4px}
+.hd-sub{font-size:11px;color:#5DC88A;font-weight:400;margin-top:3px}
+
+.hform{position:relative;z-index:2;background:var(--white);padding:48px 36px 40px;border-left:1px solid var(--gray-lt);display:flex;flex-direction:column;justify-content:center}
+.fey{font-size:10px;font-weight:500;color:var(--gray);letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+.ftitle{font-family:var(--serif);font-size:26px;color:var(--black);font-weight:700;line-height:1.2;margin-bottom:4px}
+.fsub{font-size:13px;color:var(--gray);margin-bottom:20px;font-weight:300}
+.fdiv{width:28px;height:1px;background:var(--black);margin-bottom:22px}
+.fg{margin-bottom:16px}
+.fl{font-size:10px;font-weight:500;color:var(--black2);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:5px}
+.fi{width:100%;padding:11px 0;border:none;border-bottom:1px solid var(--gray-lt);font-size:14px;font-family:var(--sans);color:var(--black);background:transparent;transition:border-color .2s;outline:none;font-weight:300;border-radius:0}
+.fi:focus{border-color:var(--black)}
+.fi::placeholder{color:var(--gray-md)}
+select.fi{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238A8880' stroke-width='1.2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:24px}
+.fcta{width:100%;padding:14px;background:var(--black);color:#fff;font-size:12px;font-weight:500;font-family:var(--sans);border:none;cursor:pointer;letter-spacing:.1em;text-transform:uppercase;transition:background .2s;margin-top:4px;border-radius:0}
+.fcta:hover{background:var(--black2)}
+.fwa{width:100%;padding:12px;background:var(--wa);color:#fff;font-size:13px;font-weight:400;font-family:var(--sans);border:none;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;transition:opacity .2s;border-radius:0}
+.fwa:hover{opacity:.88}
+.fwa svg{width:16px;height:16px;fill:#fff}
+.fok{display:none;border:1px solid var(--green);padding:14px;margin-top:12px;text-align:center}
+.fok.show{display:block}
+.fok strong{display:block;font-family:var(--serif);font-size:16px;color:var(--green);margin-bottom:3px}
+.fok span{font-size:12px;color:var(--gray);font-weight:300}
+.fleg{font-size:10px;color:var(--gray-md);margin-top:12px;line-height:1.5;text-align:center;font-weight:300}
+
+.cbar{background:var(--black);padding:13px 40px}
+.cbar-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap}
+.cb{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.05em;white-space:nowrap}
+.cb strong{color:rgba(255,255,255,.75);font-weight:500}
+.csep{width:3px;height:3px;background:rgba(255,255,255,.18);border-radius:50%;flex-shrink:0}
+
+.sec{padding:88px 40px}
+.si{max-width:1200px;margin:0 auto}
+.ey{font-size:10px;font-weight:500;color:var(--gray);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ey::before{content:'';width:18px;height:1px;background:var(--gray)}
+h2{font-family:var(--serif);font-size:clamp(30px,3.8vw,50px);color:var(--black);font-weight:300;line-height:1.1;margin-bottom:12px}
+h2 strong{font-weight:700}
+.slead{font-size:16px;color:var(--gray-dk);line-height:1.75;max-width:500px;font-weight:300}
+
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--gray-lt);margin-top:52px}
+.vc{padding:44px 32px;position:relative;overflow:hidden}
+.vc.dk{background:var(--black)}
+.vc.md{background:var(--gray-pl)}
+.vc.lt{background:var(--off)}
+.vn{position:absolute;top:16px;right:20px;font-family:var(--serif);font-size:88px;font-weight:700;line-height:1;opacity:.05;color:var(--black)}
+.vc.dk .vn{color:#fff;opacity:.06}
+.vtag{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:3px 10px;border:1px solid;display:inline-block;margin-bottom:18px}
+.vc.dk .vtag{border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.45)}
+.vc.md .vtag{border-color:var(--gray-md);color:var(--gray-dk)}
+.vc.lt .vtag{border-color:var(--gray-lt);color:var(--gray)}
+.vc h3{font-family:var(--serif);font-size:21px;font-weight:600;line-height:1.25;margin-bottom:12px}
+.vc.dk h3{color:#fff}
+.vc.md h3,.vc.lt h3{color:var(--black)}
+.vc p{font-size:14px;line-height:1.75;font-weight:300}
+.vc.dk p{color:rgba(255,255,255,.58)}
+.vc.md p,.vc.lt p{color:var(--gray-dk)}
+
+.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--gray-lt);margin-top:52px}
+.paso{padding:28px 24px;border-right:1px solid var(--gray-lt)}
+.paso:last-child{border-right:none;background:var(--black)}
+.pn{font-family:var(--serif);font-size:44px;font-weight:700;color:var(--gray-lt);line-height:1;margin-bottom:14px}
+.paso:last-child .pn{color:rgba(255,255,255,.12)}
+.paso h4{font-size:12px;font-weight:500;color:var(--black);letter-spacing:.05em;margin-bottom:6px;text-transform:uppercase}
+.paso:last-child h4{color:#fff}
+.paso p{font-size:13px;color:var(--gray-dk);line-height:1.6;font-weight:300}
+.paso:last-child p{color:rgba(255,255,255,.5)}
+
+.isabel-sec{background:var(--black);padding:88px 40px}
+.isabel-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.iq{font-family:var(--serif);font-size:clamp(22px,2.8vw,36px);color:#fff;line-height:1.35;font-weight:300;font-style:italic;margin-bottom:28px}
+.iq::before{content:'“';color:rgba(255,255,255,.2);font-size:1.5em;line-height:0;vertical-align:-.3em}
+.iwho strong{display:block;font-size:15px;color:#fff;font-weight:500;margin-bottom:3px}
+.iwho span{font-size:13px;color:rgba(255,255,255,.38);font-weight:300}
+.icreds{margin-top:28px;display:flex;flex-direction:column;gap:11px}
+.ic{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.5);line-height:1.5;font-weight:300}
+.ick{width:16px;height:16px;border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:9px;color:rgba(255,255,255,.55)}
+.dpanel{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:32px}
+.dpt{font-size:10px;font-weight:500;color:rgba(255,255,255,.28);letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px}
+.dpg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.06)}
+.dp-cell{background:var(--black);padding:22px 18px}
+.dp-val{font-family:var(--serif);font-size:28px;color:#fff;font-weight:600;line-height:1}
+.dp-lab{font-size:10px;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.07em;margin-top:5px}
+.dp-delta{font-size:11px;color:#5DC88A;font-weight:400;margin-top:3px}
+
+.testi{background:var(--white);padding:72px 40px;border-top:1px solid var(--gray-lt);border-bottom:1px solid var(--gray-lt)}
+.testi-in{max-width:640px;margin:0 auto;text-align:center}
+.stars{color:var(--black);font-size:13px;letter-spacing:4px;margin-bottom:20px}
+.tq{font-family:var(--serif);font-size:clamp(18px,2.4vw,26px);color:var(--black);line-height:1.5;font-style:italic;font-weight:300;margin-bottom:20px}
+.tname{font-size:13px;font-weight:500;color:var(--black)}
+.trole{font-size:12px;color:var(--gray);margin-top:3px;font-weight:300}
+
+.wasec{background:#075E54;padding:56px 40px}
+.wa-in{max-width:640px;margin:0 auto;text-align:center}
+.watit{font-family:var(--serif);font-size:clamp(26px,3.8vw,44px);color:#fff;font-weight:300;margin-bottom:6px;line-height:1.15}
+.wasub{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:28px;font-weight:300}
+.wabig{display:inline-flex;align-items:center;gap:11px;background:var(--wa);color:#fff;font-size:15px;font-weight:500;padding:16px 36px;text-decoration:none;letter-spacing:.04em;transition:opacity .2s;border-radius:2px}
+.wabig:hover{opacity:.88}
+.wabig svg{width:20px;height:20px;fill:#fff}
+.wanum{font-size:13px;color:rgba(255,255,255,.38);margin-top:14px;font-weight:300;letter-spacing:.05em}
+
+.ffsec{background:var(--off);padding:88px 40px;border-top:1px solid var(--gray-lt)}
+.ffin{max-width:720px;margin:0 auto}
+.ffcard{background:var(--white);padding:44px;border:1px solid var(--gray-lt)}
+.ffg{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
+.aviso{background:var(--gray-pl);padding:64px 40px;border-top:1px solid var(--gray-lt)}
+.aviso-in{max-width:780px;margin:0 auto}
+.aviso h4{font-family:var(--serif);font-size:17px;font-weight:600;color:var(--black);margin-bottom:14px}
+.aviso p{font-size:12px;color:var(--gray-dk);line-height:1.8;margin-bottom:8px;font-weight:300}
+.aviso strong{color:var(--black2);font-weight:500}
+
+footer{background:var(--black);padding:48px 40px 28px}
+.fin{max-width:1200px;margin:0 auto}
+.ftop{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.07)}
+.flogo{font-family:var(--serif);font-size:20px;color:#fff;font-weight:600;letter-spacing:.1em;margin-bottom:10px}
+.fdesc{font-size:12px;color:rgba(255,255,255,.3);line-height:1.7;font-weight:300}
+.fct{font-size:10px;font-weight:500;color:rgba(255,255,255,.28);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.fcol p,.fcol a{font-size:12px;color:rgba(255,255,255,.38);display:block;margin-bottom:6px;text-decoration:none;font-weight:300;line-height:1.5}
+.fcol a:hover{color:rgba(255,255,255,.65)}
+.fbot{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.fcopy{font-size:11px;color:rgba(255,255,255,.2);font-weight:300}
+.flinks{display:flex;gap:18px}
+.flinks a{font-size:11px;color:rgba(255,255,255,.2);text-decoration:none}
+.flinks a:hover{color:rgba(255,255,255,.5)}
+
+.floatwa{position:fixed;bottom:24px;right:24px;z-index:400;width:50px;height:50px;background:var(--wa);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,.38);text-decoration:none;transition:transform .2s}
+.floatwa:hover{transform:scale(1.08)}
+.floatwa svg{width:24px;height:24px;fill:#fff}
+
+@media(max-width:880px){.hero{grid-template-columns:1fr}.hform{border-top:1px solid var(--gray-lt);border-left:none;padding:40px 24px}.vgrid{grid-template-columns:1fr}.pasos{grid-template-columns:1fr 1fr}.isabel-in{grid-template-columns:1fr}.ftop{grid-template-columns:1fr}.ffg{grid-template-columns:1fr}}
+@media(max-width:560px){.sec{padding:60px 20px}.hcontent{padding:96px 20px 40px}.cbar{padding:12px 20px}nav{padding:0 20px}.pasos{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="floatwa" href="https://wa.me/34662128409?text=Hola%20Isabel%2C%20me%20gustar%C3%ADa%20valorar%20mi%20casa%20en%20la%20margen%20derecha%20de%20Bizkaia." target="_blank" aria-label="WhatsApp DELAGALA"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<nav id="nav">
+  <div class="nlogo">DELAGALA</div>
+  <div class="nright">
+    <span class="ntel">Tel. <strong>662 128 409</strong></span>
+    <a class="nwa" href="https://wa.me/34662128409?text=Hola%20Isabel%2C%20me%20gustar%C3%ADa%20valorar%20mi%20casa%20en%20la%20margen%20derecha%20de%20Bizkaia." target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hbg"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85&auto=format&fit=crop" alt="Costa cantábrica de la Margen Derecha de Bizkaia" loading="eager" onerror="this.src='https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1800&q=80&auto=format&fit=crop'"></div>
+  <div class="hline"></div>
+  <div class="hcontent">
+    <div class="htag"><div class="htag-line"></div><span class="htag-text">Margen Derecha · Getxo · Sopelana · Berango · Leioa · Erandio</span></div>
+    <h1>Valora tu casa<br><strong>en la margen</strong><br><em>derecha</em></h1>
+    <p class="hsub">Desde Las Arenas hasta Sopelana. Conocemos cada municipio, cada calle, cada microzona desde 2014. Tu valoración, con criterio local real.</p>
+    <div class="hdata"><div class="hd"><div class="hd-val">4.692€</div><div class="hd-lab">/m² Getxo (máximo)</div><div class="hd-sub">↑ 9,05% interanual</div></div><div class="hd"><div class="hd-val">+10</div><div class="hd-lab">Años en la zona</div><div class="hd-sub">Desde 2014</div></div><div class="hd"><div class="hd-val">Gratis</div><div class="hd-lab">Sin coste ni compromiso</div><div class="hd-sub">Respuesta en 24 h</div></div></div>
+  </div>
+  <div class="hform" id="formulario">
+    <div class="fey">Valoración gratuita</div>
+    <div class="ftitle">Valora tu inmueble</div>
+    <div class="fsub">Cuéntanos en qué municipio está. Te llamamos.</div>
+    <div class="fdiv"></div>
+    <form id="f1" onsubmit="enviar(event,'ok1','f1')">
+      <div class="fg"><label class="fl" for="n1">Nombre</label><input id="n1" class="fi" type="text" name="nombre" placeholder="Tu nombre" required></div>
+      <div class="fg"><label class="fl" for="t1">Teléfono</label><input id="t1" class="fi" type="tel" name="telefono" placeholder="662 128 409" required></div>
+      <div class="fg"><label class="fl" for="z1">Zona</label><select id="z1" class="fi" required name="zona"><option value="" disabled selected>Selecciona</option><option>Las Arenas (Getxo)</option><option>Algorta</option><option>Neguri</option><option>Sopelana</option><option>Berango</option><option>Leioa</option><option>Erandio</option><option>Barakaldo</option><option>Sestao</option><option>Portugalete</option><option>Santurtzi</option><option>Otra zona</option></select></div>
+      <div class="fg"><label class="fl" for="m1">Necesitas</label><select id="m1" class="fi" name="necesita"><option>Saber cuánto vale mi inmueble</option><option>Estoy pensando en venderlo</option><option>Tasación para herencia</option><option>Tasación para divorcio / separación</option><option>Tasación judicial u oficial</option></select></div>
+      <button type="submit" class="fcta">Solicitar valoración →</button>
+      <a class="fwa" href="https://wa.me/34662128409?text=Hola%20Isabel%2C%20me%20gustar%C3%ADa%20valorar%20mi%20casa%20en%20la%20margen%20derecha%20de%20Bizkaia." target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> O escribe por WhatsApp</a>
+      <div class="fok" id="ok1"><strong>¡Recibido! Te llamamos en 24 h.</strong><span>Gracias por confiar en DELAGALA.</span></div>
+      <p class="fleg">Datos tratados bajo el RGPD · Sin cesión a terceros · Derechos de acceso y supresión en cualquier momento</p>
+    </form>
+  </div>
+</header>
+
+<div class="cbar"><div class="cbar-in">
+  <span class="cb"><strong>Perito Judicial Homologada</strong> · Orden ECO 805/2003</span><span class="csep"></span>
+  <span class="cb"><strong>ACI</strong> · Instituto Español de Analistas Inmobiliarios</span><span class="csep"></span>
+  <span class="cb"><strong>Realtor · CRS Spain</strong></span><span class="csep"></span>
+  <span class="cb">Junta de Gobierno <strong>COAPI Bizkaia</strong></span><span class="csep"></span>
+  <span class="cb">Desde <strong>2014</strong> en Las Arenas</span>
+</div></div>
+
+<section class="sec" style="background:var(--white)">
+  <div class="si">
+    <div class="ey">Por qué DELAGALA</div>
+    <h2><strong>Tres razones</strong> que lo cambian todo</h2>
+    <p class="slead">La Margen Derecha no es una sola zona. Cada municipio tiene su propio mercado. Nosotros lo conocemos.</p>
+    <div class="vgrid">
+      <div class="vc dk"><div class="vn">01</div><div class="vtag">Los datos</div><h3>Una zona, muchos<br>mercados distintos</h3><p>El precio en Neguri puede ser el doble que en Erandio. Sopelana tiene su propia dinámica. Berango crece a ritmo distinto que Las Arenas. No hay respuesta genérica para la Margen Derecha — hay una respuesta para cada inmueble, en cada municipio, en cada calle.</p></div>
+      <div class="vc md"><div class="vn">02</div><div class="vtag">La autoridad</div><h3>10 años de presencia<br>en el territorio</h3><p>DELAGALA lleva desde 2014 operando exclusivamente en Getxo y la Margen Derecha. No somos una oficina en Bilbao que "también cubre" la zona. Somos el equipo local. Y eso, en el momento de valorar y vender, marca toda la diferencia.</p></div>
+      <div class="vc lt"><div class="vn">03</div><div class="vtag">La experiencia</div><h3>Perito Judicial en<br>toda la Margen Derecha</h3><p>Para herencias, divorcios o procedimientos hipotecarios el informe debe cumplir la Orden ECO 805/2003. Isabel es Perito Judicial Homologada y miembro de la Junta de Gobierno del COAPI de Bizkaia. Cobertura en todos los municipios de la Margen Derecha.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--gray-pl)">
+  <div class="si">
+    <div class="ey">El proceso</div>
+    <h2>De tu primera llamada <strong>a la valoración real</strong></h2>
+    <div class="pasos">
+      <div class="paso"><div class="pn">01</div><h4>Nos contactas</h4><p>Por formulario, teléfono o WhatsApp. Un mensaje es suficiente para empezar.</p></div>
+      <div class="paso"><div class="pn">02</div><h4>Te llamamos en 24 h</h4><p>Isabel o su equipo te contacta para entender tu situación y tus objetivos.</p></div>
+      <div class="paso"><div class="pn">03</div><h4>Visita al inmueble</h4><p>Nos adaptamos a tu horario. Conocemos el mercado local desde 2014.</p></div>
+      <div class="paso"><div class="pn">04</div><h4>Tu valoración real</h4><p>Criterio técnico y datos locales. Gratis. Sin ningún compromiso de venta.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="isabel-sec">
+  <div class="isabel-in">
+    <div>
+      <p class="iq">No vendemos pisos. Acompañamos decisiones de vida con el rigor que merecen.</p>
+      <div class="iwho"><strong>Isabel De la Gala</strong><span>CEO &amp; Fundadora · DELAGALA Consultoría Inmobiliaria</span></div>
+      <div class="icreds">
+        <div class="ic"><div class="ick">✓</div>Perito Judicial Homologada · Orden ECO 805/2003</div>
+        <div class="ic"><div class="ick">✓</div>ACI · Instituto Español de Analistas Inmobiliarios</div>
+        <div class="ic"><div class="ick">✓</div>Realtor · CRS Spain (Certified Residential Specialist)</div>
+        <div class="ic"><div class="ick">✓</div>Junta de Gobierno · COAPI de Bizkaia</div>
+        <div class="ic"><div class="ick">✓</div>Más de 10 años en el mercado de Bizkaia · Desde 2014</div>
+      </div>
+    </div>
+    <div class="dpanel">
+      <div class="dpt">Mercado Margen Derecha · 2026</div>
+      <div class="dpg"><div class="dp-cell"><div class="dp-val">4.692€</div><div class="dp-lab">/m² Getxo (máx.)</div><div class="dp-delta">↑ 9,05% anual</div></div><div class="dp-cell"><div class="dp-val">3.200€</div><div class="dp-lab">/m² media zona</div></div><div class="dp-cell"><div class="dp-val">+9%</div><div class="dp-lab">Variación anual</div><div class="dp-delta">Getxo Q2 2026</div></div><div class="dp-cell"><div class="dp-val">+10</div><div class="dp-lab">Años en la zona</div><div class="dp-delta">Desde 2014</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="testi"><div class="testi-in">
+  <div class="stars">★★★★★</div>
+  <p class="tq">Profesionales y eficaces. Dejamos en sus manos un piso en Las Arenas para alquilar, en menos de una semana alquilado. Buscan inquilinos a la medida de cada piso.</p>
+  <div class="tname">Marijose P.</div>
+  <div class="trole">Google Reviews · Las Arenas</div>
+</div></div>
+
+<section class="wasec"><div class="wa-in">
+  <h2 class="watit">¿Prefieres escribir<br><em style="font-style:italic">por WhatsApp?</em></h2>
+  <p class="wasub">Respuesta directa con Isabel. Sin centralita, sin esperas.</p>
+  <a class="wabig" href="https://wa.me/34662128409?text=Hola%20Isabel%2C%20me%20gustar%C3%ADa%20valorar%20mi%20casa%20en%20la%20margen%20derecha%20de%20Bizkaia." target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Escribir a Isabel — 662 128 409</a>
+  <p class="wanum">También puedes llamar al 662 128 409 en horario comercial</p>
+</div></section>
+
+<section class="ffsec"><div class="ffin">
+  <div class="ey" style="margin-bottom:10px">Valoración gratuita · Sin compromiso</div>
+  <h2 style="margin-bottom:36px">¿Cuánto vale tu inmueble<br><strong>en la Margen Derecha?</strong></h2>
+  <div class="ffcard">
+    <form id="f2" onsubmit="enviar(event,'ok2','f2')">
+      <div class="ffg">
+        <div class="fg"><label class="fl" for="n2">Nombre</label><input id="n2" class="fi" type="text" name="nombre" placeholder="Tu nombre" required></div>
+        <div class="fg"><label class="fl" for="t2">Teléfono</label><input id="t2" class="fi" type="tel" name="telefono" placeholder="662 128 409" required></div>
+        <div class="fg"><label class="fl" for="z2">Zona</label><select id="z2" class="fi" required name="zona"><option value="" disabled selected>Zona</option><option>Las Arenas (Getxo)</option><option>Algorta</option><option>Neguri</option><option>Sopelana</option><option>Berango</option><option>Leioa</option><option>Erandio</option><option>Barakaldo</option><option>Sestao</option><option>Portugalete</option><option>Santurtzi</option><option>Otra zona</option></select></div>
+        <div class="fg"><label class="fl" for="h2">Mejor hora</label><select id="h2" class="fi" name="necesita"><option>Mañana (9h–13h)</option><option>Tarde (16h–19h)</option><option>Cualquier hora</option></select></div>
+      </div>
+      <button type="submit" class="fcta" style="margin-top:8px">Solicitar valoración gratuita →</button>
+      <a class="fwa" href="https://wa.me/34662128409?text=Hola%20Isabel%2C%20me%20gustar%C3%ADa%20valorar%20mi%20casa%20en%20la%20margen%20derecha%20de%20Bizkaia." target="_blank" style="margin-top:8px"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp · 662 128 409</a>
+      <div class="fok" id="ok2"><strong>¡Recibido! Te llamamos en menos de 24 horas.</strong><span>Gracias por confiar en DELAGALA.</span></div>
+      <p class="fleg">Datos tratados bajo el RGPD · Sin cesión a terceros · Derechos de acceso, rectificación y supresión en cualquier momento</p>
+    </form>
+  </div>
+</div></section>
+
+<section class="aviso" id="aviso"><div class="aviso-in">
+  <h4>Aviso Legal</h4>
+  <p><strong>Titular:</strong> ICA HOME SL · NIF B10641546</p>
+  <p><strong>Domicilio social:</strong> Calle Las Mercedes 17, 48930 Las Arenas – Getxo (Bizkaia)</p>
+  <p><strong>Correo electrónico:</strong> info@idelagala.com · <strong>Teléfono:</strong> 662 128 409</p>
+  <p><strong>Actividad:</strong> Consultoría e intermediación inmobiliaria. Marca comercial: DELAGALA Consultoría Inmobiliaria.</p>
+  <p>En cumplimiento de la Ley 34/2002 (LSSI-CE), se informa que este sitio web es propiedad de ICA HOME SL. Los datos personales facilitados serán tratados conforme al Reglamento (UE) 2016/679 (RGPD) y la LOPDGDD 3/2018. El usuario puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad dirigiéndose a info@idelagala.com.</p>
+</div></section>
+
+<footer><div class="fin">
+  <div class="ftop">
+    <div><div class="flogo">DELAGALA</div><p class="fdesc">Consultoría Inmobiliaria especializada en Getxo, Las Arenas y la Margen Derecha de Bizkaia. Desde 2014 acompañando decisiones de vida con rigor y transparencia.</p></div>
+    <div class="fcol"><div class="fct">Contacto</div>
+      <p>Calle Las Mercedes 17</p><p>48930 Las Arenas – Getxo (Bizkaia)</p>
+      <a href="tel:+34662128409">662 128 409</a>
+      <a href="https://wa.me/34662128409" target="_blank">WhatsApp directo</a>
+      <a href="mailto:info@idelagala.com">info@idelagala.com</a>
+    </div>
+    <div class="fcol"><div class="fct">Credenciales</div>
+      <p>Perito Judicial Homologada · ECO 805/2003</p>
+      <p>ACI · Realtor · CRS Spain</p>
+      <p>COAPI Bizkaia – Junta de Gobierno</p>
+      <p>ICA HOME SL · B10641546</p>
+    </div>
+  </div>
+  <div class="fbot">
+    <span class="fcopy">© 2026 DELAGALA · ICA HOME SL B10641546 · Todos los derechos reservados</span>
+    <div class="flinks"><a href="#aviso">Aviso legal</a><a href="#">Política de privacidad</a><a href="#">Cookies</a></div>
+  </div>
+</div></footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',window.scrollY>40));
+const SCRIPT_URL = 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT';
+const ORIGEN = 'valoramicasamargenderecha';
+function enviar(e,okId,fId){
+  e.preventDefault();
+  const f=document.getElementById(fId),btn=f.querySelector('.fcta');
+  if(btn){btn.textContent='Enviando…';btn.disabled=true;}
+    const fd=new FormData(f);
+  fd.append('origen', ORIGEN);
+  const finish=()=>{
+    f.querySelectorAll('input,select').forEach(el=>{if(el.type!=='submit')el.value='';});
+    const ok=document.getElementById(okId);
+    if(ok)ok.classList.add('show');
+    if(btn){btn.textContent='Enviado ✓';btn.style.background='#1A8A52';}
+  };
+  if(SCRIPT_URL.startsWith('http')){
+    fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:fd}).then(finish).catch(()=>{
+      const msg=encodeURIComponent('Hola Isabel, solicito valoraciÃ³n. Nombre: '+fd.get('nombre')+' Â· Tel: '+fd.get('telefono')+' Â· Zona: '+fd.get('zona'));
+      window.open('https://wa.me/34662128409?text='+msg,'_blank');
+      finish();
+    });
+  } else {
+    const msg=encodeURIComponent('Hola Isabel, solicito valoraciÃ³n. Nombre: '+fd.get('nombre')+' Â· Tel: '+fd.get('telefono')+' Â· Zona: '+fd.get('zona'));
+      window.open('https://wa.me/34662128409?text='+msg,'_blank');
+      finish();
+  }
+}
+</script>
+</body>
+</html>
