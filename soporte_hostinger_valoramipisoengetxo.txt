@@ -1,0 +1,36 @@
+Asunto: Dominio valoramipisoengetxo.com — pedido roto / no se puede verificar ni completar la configuración del sitio web
+
+Hola,
+
+Tengo un problema con el dominio valoramipisoengetxo.com en mi cuenta de Hostinger y necesito ayuda para desbloquearlo, porque llevo varios intentos sin conseguirlo desde la interfaz.
+
+DOMINIO AFECTADO:
+valoramipisoengetxo.com
+
+CUENTA DE HOSTINGER (login):
+alcarmer@gmail.com
+
+CONTACTO/PROPIETARIO REGISTRADO DEL DOMINIO (WHOIS):
+isabeldelagala@gmail.com — Isabel de la Gala
+
+SECUENCIA DE LO OCURRIDO:
+
+1. El dominio aparece en mi panel de "Dominios" con estado "Verificación pendiente" y fecha de caducidad 2027-07-13.
+
+2. Recibimos el email de verificación de Hostinger (en la cuenta isabeldelagala@gmail.com, que es el contacto del dominio). Al pulsar el enlace de verificación del email, la página devuelve el error: "Pedido no encontrado".
+
+3. Tras ese error, el dominio sigue mostrando "Verificación pendiente" sin ningún cambio.
+
+4. Contraté un plan de hosting Business (caduca 2027-07-16) y creé un sitio asociado a este dominio desde "Sitios web". Ahí aparece la tarjeta del dominio con un botón "Panel" y el aviso: "Termina el registro de tu dominio para empezar a usarlo" con un botón "Finalizar registro".
+
+5. Al pulsar "Finalizar registro", en vez de completar la verificación del dominio que ya tengo, me aparece un diálogo que dice: "El dominio valoramipisoengetxo.com ya está registrado. Selecciona un dominio diferente con la misma terminación. Después de confirmar, se te redirigirá al registro de dominio." — Es decir, el sistema me está tratando como si quisiera COMPRAR un dominio nuevo, cuando el dominio ya es mío y está en mi portafolio.
+
+CONCLUSIÓN / SOSPECHA:
+Creo que el pedido de compra original de valoramipisoengetxo.com tiene algún problema interno en vuestro sistema (posiblemente relacionado con el error "Pedido no encontrado" del paso 2), que impide que se complete la verificación normal y que confunde el flujo de "crear sitio web" haciéndolo pensar que el dominio necesita registrarse de nuevo.
+
+LO QUE NECESITO:
+Que se revise el pedido de compra de valoramipisoengetxo.com en mi cuenta y se corrija lo que esté fallando, para poder:
+a) Verificar el dominio correctamente, y
+b) Completar la configuración del sitio web ya creado (plan Business) para poder subir mis archivos.
+
+Gracias de antemano.
