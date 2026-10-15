@@ -96,6 +96,45 @@ footer{background:#080808;padding:44px 32px;text-align:center;border-top:1px sol
 @media(max-width:560px){.vbubble{bottom:88px;left:16px}.vbubble-ring{width:72px;height:72px}}
 
 </style>
+<!-- Meta Pixel (se carga SOLO si el visitante acepta las cookies) -->
+<script>
+(function(){
+  var KEY='delagala_cookies_meta';
+  function get(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function set(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
+  function loadPixel(){
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1354097879940130');
+    fbq('track', 'PageView');
+  }
+  window.dlgCookies = function(ok){
+    set(ok ? 'granted' : 'denied');
+    var b=document.getElementById('dlg-cookies'); if(b) b.style.display='none';
+    if(ok) loadPixel();
+  };
+  if(get()==='granted') loadPixel();
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.getElementById('dlg-cookies');
+    if(b && get()===null) b.style.display='flex';
+  });
+})();
+</script>
+<style>
+#dlg-cookies{display:none;position:fixed;left:0;right:0;bottom:0;z-index:600;background:#0D0D0D;color:#FBF7EE;
+  padding:14px 20px;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+  font:400 14px/1.45 'Nunito Sans',Arial,sans-serif;box-shadow:0 -4px 18px rgba(0,0,0,.25)}
+#dlg-cookies p{max-width:640px;margin:0}
+#dlg-cookies button{font:700 13px 'Nunito Sans',Arial,sans-serif;padding:9px 18px;border-radius:4px;cursor:pointer;border:1px solid #E8B54D}
+#dlg-cookies .ok{background:#E8B54D;color:#0D0D0D}
+#dlg-cookies .no{background:transparent;color:#FBF7EE}
+</style>
 </head>
 <body>
 
@@ -227,4 +266,8 @@ function closeVideo(){
 }
 
 </script>
+<div id="dlg-cookies" role="dialog" aria-label="Cookies">
+  <p>Usamos una cookie de Meta (Facebook/Instagram) para medir el resultado de nuestros anuncios. Solo se activa si la aceptas.</p>
+  <div><button class="ok" onclick="dlgCookies(true)">Aceptar</button> <button class="no" onclick="dlgCookies(false)">Rechazar</button></div>
+</div>
 </body></html>
