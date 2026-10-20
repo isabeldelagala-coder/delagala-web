@@ -229,7 +229,7 @@ footer{background:#080808;padding:44px 32px;text-align:center;border-top:1px sol
 window.addEventListener('scroll',()=>{const n=document.getElementById('nav');if(n)n.classList.toggle('on',window.scrollY>40)});
 // ═══ BASE DE DATOS DE LEADS ═══
 // Pega aquí la URL de tu Apps Script (termina en /exec):
-const SCRIPT_URL = 'PEGA_AQUI_TU_URL_DE_APPS_SCRIPT';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxW8E_t0kyER6eqDCwI2jWBG1zQWfDO7yOV5l6zNkHoZ4HUOtEHyIxDrVaJmCh8dr5RBg/exec';
 const ORIGEN = 'valoramipisoengetxo.com';
 
 function enviar(e,okId,fId){
@@ -238,6 +238,7 @@ function enviar(e,okId,fId){
   const btn=f.querySelector('button[type=submit]');
   if(btn){btn.textContent='Enviando…';btn.disabled=true;}
   const fd=new FormData(f);
+  if (window.fbq) fbq('track', 'Lead');
   fd.append('origen', ORIGEN);
   const finish=()=>{
     f.querySelectorAll('input,select').forEach(el=>{if(el.type!=='submit')el.value='';});
